@@ -1,0 +1,13 @@
+<section id="blog">
+  <h2>Latest Insights</h2>
+  <article>
+    <h3>The Future of Leadership in a Hybrid World</h3>
+    <p>Explore how leaders can adapt to hybrid teams and foster innovation in a digital-first era.</p>
+    <a href="#">Read More</a>
+  </article>
+  <article>
+    <h3>From Burnout to Breakthrough</h3>
+    <p>Learn how to recognize burnout and build resilience as a leader.</p>
+    <a href="#">Read More</a>
+  </article>
+</section>
