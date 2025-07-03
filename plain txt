@@ -1,7 +1,15 @@
-Header Navigation:
-- Logo (Reinvent International)
-- Programs
-- About
-- Contact
-- Book Now (CTA Button)
-- Login/Account
+/reinvent-website/
+├── website/
+│   ├── index.html (Homepage)
+│   ├── css/
+│   │   └── styles.css (Main stylesheet)
+│   ├── js/
+│   │   └── main.js (Interactive functionality)
+│   ├── images/ (Professional imagery)
+│   └── pages/
+│       ├── about.html (About Us)
+│       ├── reinvent1.html (Program page)
+│       └── resources.html (Free resources)
+├── assets/ (Original images)
+├── design-research.md (Design documentation)
+└── project-summary.md (This document)
