@@ -1,0 +1,43 @@
+-- Users table (handled by Supabase Auth)
+
+-- Profiles table
+CREATE TABLE profiles (
+  id UUID REFERENCES auth.users PRIMARY KEY,
+  user_id UUID REFERENCES auth.users,
+  first_name TEXT,
+  last_name TEXT,
+  email TEXT,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+
+-- Programs table
+CREATE TABLE programs (
+  id TEXT PRIMARY KEY,
+  title TEXT,
+  description TEXT,
+  duration TEXT,
+  lessons INTEGER,
+  price INTEGER,
+  level TEXT,
+  features JSONB
+);
+
+-- Enrollments table
+CREATE TABLE enrollments (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  user_id UUID REFERENCES auth.users,
+  program_id TEXT REFERENCES programs(id),
+  status TEXT DEFAULT 'active',
+  progress INTEGER DEFAULT 0,
+  enrolled_at TIMESTAMP DEFAULT NOW()
+);
+
+-- Lessons table
+CREATE TABLE lessons (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  program_id TEXT REFERENCES programs(id),
+  title TEXT,
+  content TEXT,
+  video_url TEXT,
+  order_index INTEGER
+);
